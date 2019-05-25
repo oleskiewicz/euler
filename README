@@ -1,0 +1,9 @@
+project euler
+=============
+
+solutions to project euler in C.
+
+./run.sh builds, tests (using values from t.txt), solves (using questions from
+q.txt), and saves answers to problems (to file a.txt)
+
+./print.sh prints a table of answers from a.txt
