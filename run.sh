@@ -3,10 +3,12 @@
 PS=$(find . -type f -name "*.c" | sed 's/.c//g' | tr -d './' | sort)
 
 >a.txt
+echo a.txt > .gitignore
 
 for p in $PS
 do
 	make -s "$p"
+	echo "$p" >> .gitignore
 	t=$(awk -v p="$p" 'NR==p {print $1}' t.txt)
 	got=$(./$p $t)
 	want=$(awk -v p="$p" 'NR==p {print $2}' t.txt)
