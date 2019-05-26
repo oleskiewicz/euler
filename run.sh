@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-PS=$(find . -type f -name "*.c" | sed 's/.c//g' | tr -d './' | sort)
+PS=$(find . -type f -name "*.c" | grep -v "template.c" | sed 's/.c//g' | tr -d './' | sort)
 
 >a.txt
 echo a.txt > .gitignore
