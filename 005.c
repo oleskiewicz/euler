@@ -1,22 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
-long int
-gcd(long int a, long int b) {
-	while(b) {
-		a %= b;
-		b ^= a;
-		a ^= b;
-		b ^= a;
-	}
-	return a;
-}
-
-long int
-lcm(long int a, long int b) {
-	return a * b / gcd(a, b);
-}
+#include "lib.h"
 
 long int
 vreduce(long int (*f)(long int, long int), int n, va_list ap) {
