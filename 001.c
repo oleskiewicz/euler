@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "lib.h"
-
 int
 s(int n) {
 	return n * (n + 1) / 2;
