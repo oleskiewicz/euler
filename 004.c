@@ -20,8 +20,8 @@ int
 main(int argc, char *argv[]) {
 	int d = atoi(argv[1]), m = pow(10, d), a = 0;
 
-	for(int i = m; i > 0; i--) {
-		for(int j = m; j > 0; j--) {
+	for(int i = m; i > pow(10, d - 1); i--) {
+		for(int j = m; j > pow(10, d - 1); j--) {
 			int p = i * j;
 			if(p > a && is_palindrome(p)) {
 				a = p;
